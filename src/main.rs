@@ -1,4 +1,5 @@
 use std::io;
+mod character;
 
 fn main() {
     print!("\x1b[33m
@@ -37,8 +38,9 @@ fn main() {
     }
 }
 
-fn register_new_char() {
-    print!("\x1b[30mNew Character.\n");
+pub fn register_new_char() {
+    print!("\x1b[30mEnter your character's new name: \n");
+    character::character::new_character();
 }
 
 fn print_existing_char() {
